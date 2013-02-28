@@ -1,4 +1,4 @@
-\documentclass[useAMS,fleqn, usenatbib]{mn2e}
+\documentclass[useAMS,fleqn,usenatbib]{mn2e}
 \usepackage{amsmath}%
 \usepackage{amsfonts}%
 \usepackage{amssymb}%
@@ -65,7 +65,7 @@ it is important to fully understand and characterize any unwanted signal that
 may hinder drawing accurate conclusions from the data. Several systematics have been investigated
 to-date, such as~\citep{Cunha:2012us,Chang:2012cp,Yoo:2012vm,Chang:2012cn} among others, however one in particular,
 the Lorentz boost of photons caused by our Galaxy's peculiar motion, has been neglected.
-In this work we quantify its importance to weak-lensing surveys. This work is complementary to \citep{Bonvin:2008ni} in which the effects of source and observer motion due to their local gravitational fields were considered.
+In this work we quantify its importance to weak-lensing surveys.   This work is complementary to \cite{Bonvin:2008ni} in which the effects of source and observer motion due to their local gravitational fields were considered.
 
 The paper is organized as follows: section~\ref{wl_background} briefly reviews
 weak lensing shear and convergence; section~\ref{peculiar}   discusses how Lorentz boosts distort images;
@@ -180,39 +180,34 @@ and, therefore, lead to an incorrect reconstruction of the gravitational lensing
 
 To obtain a first estimate of how images are distorted due to Lorentz boosts, we 
 consider two spatial vectors, $\hat{n}_1$ and $\hat{n}_2$, separated by a small 
-angle $\cos\delta\alpha = \hat{n}_1\cdot\hat{n}_2$. 
-%We will adopt coordinates in which our motion is in the  ${\bf\hat{z}}$ direction and use spherical 
-%coordinates $(\theta,\phi)$, with $\theta$ the polar
-%angle measured from ${\bf\hat{z}}$ and $\phi$ the azimuthal angle. 
-%
-Under a boost $\beta \hat{v}$:
+angle $\cos\delta\alpha = \hat{n}_1\cdot\hat{n}_2$. Under a boost $\beta \hat{v}$:
 \begin{eqnarray}
     \hat{n}' & = &
-    \left( \frac{\cos\theta+\beta}{1+\beta \cos\theta} \right) \hat{v}
-    + \frac{\hat{n}-\hat{v}\cos\theta}{\gamma(1+\beta\cos\theta)} \\
-    & \simeq & \hat{n} + \beta \left( \hat{v} - \hat{n}\cos\theta \right),
+    \left( \frac{\cos\vartheta+\beta}{1+\beta \cos\vartheta} \right) \hat{v}
+    + \frac{\hat{n}-\hat{v}\cos\vartheta}{\gamma(1+\beta\cos\vartheta)} \\
+    & \simeq & \hat{n} + \beta \left( \hat{v} - \hat{n}\cos\vartheta \right),
 \end{eqnarray}
-where $\cos\theta = \hat{n}\cdot\hat{v}$.  For the weak lensing systems under consideration
+where $\cos\vartheta = \hat{n}\cdot\hat{v}$.  For the weak lensing systems under consideration
 the size of the lensed field is small, so we are interested in  $\hat{n}_1 \simeq \hat{n}_2$.
 Both vectors will then be, to lowest order in small quantities, 
-the same angle $\theta$ away from the boost direction. 
+the same angle $\vartheta$ away from the boost direction. 
 This gives:
 \begin{eqnarray}
     \cos\delta\alpha'& \!\!\!\!\!=\!\!\!\!\! & \hat{n}_1'\cdot\hat{n}_2' \\
-    &\!\!\!\!\! \simeq \!\!\!\!\!& \left( \hat{n}_1 + \beta \left( \hat{v} - \hat{n}_1\cos\theta \right) \right)
-    \left( \hat{n}_2 + \beta \left( \hat{v} - \hat{n}_2\cos\theta \right) \right) \\
-    &\!\!\!\!\! =\!\!\!\!\! & \cos(\delta\alpha) + 2\beta\cos\theta\left( 1-\cos\delta\alpha \right),
+    &\!\!\!\!\! \simeq \!\!\!\!\!& \left( \hat{n}_1 + \beta \left( \hat{v} - \hat{n}_1\cos\vartheta \right) \right)
+    \left( \hat{n}_2 + \beta \left( \hat{v} - \hat{n}_2\cos\vartheta \right) \right) \\
+    &\!\!\!\!\! =\!\!\!\!\! & \cos(\delta\alpha) + 2\beta\cos\vartheta\left( 1-\cos\delta\alpha \right),
 \end{eqnarray}
 or, expanding again in powers of $\delta\alpha$,
 \begin{equation}
-    \delta\alpha' \simeq \delta\alpha \left( 1 - \beta\cos\theta \right).
+    \delta\alpha' \simeq \delta\alpha \left( 1 - \beta\cos\vartheta \right).
 \end{equation}
 Because this equation holds irrespective of the direction $\hat{n}_1-\hat{n}_2$, it follows that,
 to first order in the small quantities $\beta$ and $\delta\alpha$,
 objects will only undergo magnification.
 
 
-Any object with a circular cross section
+It turns out that any object with a circular cross section
 will retain that circular cross section to all orders in $\beta$.
 Therefore, for intrinsically circular galaxy images  {\it{no ellipticity will 
 be induced due to our motion}}.
@@ -233,10 +228,10 @@ of convergence {\it will} be affected by relativistic aberration.
 \label{shear}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We now present a general procedure for boosting the shear matrix in order to extend the results of the previous section to higher order.
+We now present a general procedure for boosting the shear matrix in order to extend the results of the previous section to higher order, although we only explicitly work to first order.
 
 Consider a unit vector  in an arbitrary direction $(\theta,\phi)$ specified in spherical coordinates.  Without loss of genearlity, we choose our coordinate axes such that 
-$(\theta,\phi)\simeq(\pi/2-\delta\theta,\pi/2-\delta\phi)$.   In Cartesian coordinates,
+$(\theta,\phi)\simeq(\pi/2+\delta\theta,\pi/2+\delta\phi)$.   In Cartesian coordinates,
 \begin{equation}
 {\bf x}=\left(\begin{array}{c}
 x\\
@@ -248,15 +243,15 @@ z
 -\delta\theta
 \end{array}\right).
 \end{equation}
-In order to tranform to a frame where the boost is in the $\hat z$ direction, we rotate this unit vector by an arbitrary angle $\psi$ about the ${\bf x}$-axis. Since the boost will not affect the azimuthal angle, there is no need to also rotate about the ${\bf z}$-axis.
+In order to tranform to a frame where the boost is in the $\hat z$ direction, we rotate this unit vector by an angle $\psi = \pi/2-\vartheta$ about the ${\bf x}$-axis. Since the boost will not affect the azimuthal angle, there is no need to also rotate about the ${\bf z}$-axis.
 
 We next boost the unit vector in the z-direction, and then rotate back to the original frame.
 The boosted coordinates $(\theta',\phi')$, are
 again represented as
- $(\pi/2-\delta\theta',\pi/2-\delta\phi')$:
+ $(\pi/2+\delta\theta',\pi/2+\delta\phi')$:
 \begin{eqnarray}
-\delta\theta' & \simeq &\delta\theta+\beta\delta\theta\sin\psi\,,\\
-\delta\phi' & \simeq & \delta\phi+\beta\delta\phi\sin\psi.
+\delta\theta' & \simeq &\delta\theta-\beta\delta\theta\sin\psi\,,\\
+\delta\phi' & \simeq & \delta\phi-\beta\delta\phi\sin\psi.
 \end{eqnarray}
 Here we have evaluated everything to second order in small parameters
 $\delta\theta$, $\delta\phi$, and $\beta$, and have ignored higher order contributions.
@@ -265,12 +260,12 @@ We can immediately see  that there will be induced magnification due
 to relativistic aberration. From eq.~\ref{matrix} we have
 \begin{equation}
 A_{ij} = \left(\begin{array}{cc}
-1+\beta\sin\psi & 0\\
-0 & 1+\beta\sin\psi
+1-\beta\sin\psi & 0\\
+0 & 1-\beta\sin\psi
 \end{array}\right),
 \end{equation}
 from which we conclude that only magnification effects are present
-at first order in $\beta$: $\kappa = -\beta\sin\psi$. As current measurements of
+at first order in $\beta$: $\kappa = \beta\sin\psi$. As current measurements of
 $\kappa$ from weak lensing surveys are of order $10^{-2}$ and $\beta\sim10^{-3}$,
 we expect this magnification to be up to $10$ per cent of weak lensing effects.
 
@@ -378,7 +373,7 @@ multipoles ($\ell\sim 5$ and above) as well as for surveys with small sky covera
 However, as seen in Figure~\ref{ps_plot}, for surveys mapping a third of the 
 sky, the convergence power spectrum purely from boost effects can become comparable to the expected 
 primordial convergence power spectrum. This illustrates a need to account for the Lorentz
-boost of weak-lensing images for large surveys such as LSST and DES. It could also affect measurements that probe the low-multipole weak-lensing signal, such as \citep{Kesden:2003zm}.   There are 
+boost of weak-lensing images for large surveys such as LSST and DES. It could also affect measurements that probe the low-multipole weak-lensing signal, such as \cite{Kesden:2003zm}.   There are 
 still several second order effects which should be investigated, in
 particular the effect of boosting on isophotes and effects on flexion and other second
 order lensing quantities.  
@@ -392,8 +387,9 @@ on the radial luminosity profile and spectrum of a galaxy.
 
 Higher order effects from boosting may become appreciable when considering 
 second-order lensing effects, such as flexion.  To
-higher order in small parameters, shear terms do 
-appear: $\gamma_{1}=-\frac{\beta}{2}\delta\theta^{2}\sin\psi$.
+higher order in small parameters, shear terms may 
+appear due to projection effects from the sky onto the observer plane:
+$\gamma_{1}=-\frac{\beta}{2}\delta\theta^{2}\sin\psi$.
 Note that $\delta\theta$ is the angular size in radians of a galaxy, and 
 will thus be at least an order of magnitude or two smaller than $\beta$.
 
@@ -406,7 +402,7 @@ safely be neglected.
 
 
 \section*{Acknowledgments}
-We would like to thank Tim Ivancic for his contributions to the early part of this work, Camille Bonvin for conversations regarding \citep{Bonvin:2008ni}, and the referee for pointing out the derivation at the beginning of section \ref{peculiar}.
+We would like to thank Tim Ivancic for his contributions to the early part of this work, Camille Bonvin for conversations regarding \cite{Bonvin:2008ni}, and the referee for pointing out the derivation at the beginning of section \ref{peculiar}.
 AY and JM were supported in part by a US Department of Education GAANN grant to the CWRU Department of Physics.  AY was also supported by a NASA Earth and Space Science Fellowship -- Grant TRN507323.
 GDS is supported in part by a grant from the US DOE to the particle astrophysics theory group at CWRU.  
 
@@ -432,10 +428,11 @@ GDS is supported in part by a grant from the US DOE to the particle astrophysics
   %%CITATION = PHRVA,D81,083534;%%
   
   %\cite{Bonvin:2008ni}
-\bibitem[\protect\citeauthoryear{Bonvin}{2008}]{Bonvin:2008ni}
-  Bonvin C.,
+\bibitem{Bonvin:2008ni} 
+  C.~Bonvin,
   %``Effect of Peculiar Motion in Weak Lensing,''
-  2008, Phys.\ Rev.\ D, 78, 123530
+  Phys.\ Rev.\ D {\bf 78}, 123530 (2008)
+  [arXiv:0810.0180 [astro-ph]].
   %%CITATION = ARXIV:0810.0180;%%
 
 
@@ -475,11 +472,11 @@ GDS is supported in part by a grant from the US DOE to the particle astrophysics
   %%CITATION = ARXIV:1207.2471;%%
 
   %\cite{Kesden:2003zm}
-\bibitem[\protect\citeauthoryear{Kested, Kamionkowski, \& Cooray}{2003}]{Kesden:2003zm} 
-  Kesden M. H., Kamionkowski M., and Cooray A.,
+\bibitem{Kesden:2003zm} 
+  M.~H.~Kesden, M.~Kamionkowski and A.~Cooray,
   %``Can cosmic shear shed light on low cosmic microwave background multipoles?,''
-  2003, Phys.\ Rev.\ Lett.\, 91, 221302
-%%  [astro-ph/0306597].
+  Phys.\ Rev.\ Lett.\  {\bf 91}, 221302 (2003)
+  [astro-ph/0306597].
   %%CITATION = ASTRO-PH/0306597;%%
   
   
