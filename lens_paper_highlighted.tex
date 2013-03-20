@@ -180,34 +180,35 @@ and, therefore, lead to an incorrect reconstruction of the gravitational lensing
 
 To obtain a first estimate of how images are distorted due to Lorentz boosts, we 
 consider two spatial vectors, $\hat{n}_1$ and $\hat{n}_2$, separated by a small 
-angle $\cos\delta\alpha = \hat{n}_1\cdot\hat{n}_2$. Under a boost $\beta \hat{v}$:
+angle $\cos\delta\alpha = \hat{n}_1\cdot\hat{n}_2$. Under a boost $\beta \hat{v}$, {\color{red} a unit vector $\hat{n}$ transforms to}:
 \begin{eqnarray}
     \hat{n}' & = &
-    \left( \frac{\cos{\color{red}\vartheta}+\beta}{1+\beta \cos{\color{red}\vartheta}} \right) \hat{v}
-    + \frac{\hat{n}-\hat{v}\cos{\color{red}\vartheta}}{\gamma(1+\beta\cos{\color{red}\vartheta})} \\
-    & \simeq & \hat{n} + \beta \left( \hat{v} - \hat{n}\cos{\color{red}\vartheta} \right),
+    \left( \frac{\cos{\chi}+\beta}{1+\beta \cos{\chi}} \right) \hat{v}
+    + \frac{\hat{n}-\hat{v}\cos{\chi}}{\gamma(1+\beta\cos{\chi})} \\
+    & \simeq & \hat{n} + \beta \left( \hat{v} - \hat{n}\cos{\chi} \right),
 \end{eqnarray}
-where $\cos{\color{red}\vartheta} = \hat{n}\cdot\hat{v}$.  For the weak lensing systems under consideration
-the size of the lensed field is small, so we are interested in  $\hat{n}_1 \simeq \hat{n}_2$.
+where $\cos{\chi} = \hat{n}\cdot\hat{v}$.  {\color{red} (Primes will be used throughout to denote boosted quantities.)Œ} 
+For the weak lensing systems under consideration
+the size of the lensed object is small, so we are interested in  $\hat{n}_1 \simeq \hat{n}_2$.
 Both vectors will then be, to lowest order in small quantities, 
-the same angle ${\color{red}\vartheta}$ away from the boost direction. 
+the same angle ${\chi}$ away from the boost direction. 
 This gives:
 \begin{eqnarray}
     \cos\delta\alpha'& \!\!\!\!\!=\!\!\!\!\! & \hat{n}_1'\cdot\hat{n}_2' \\
-    &\!\!\!\!\! \simeq \!\!\!\!\!& \left( \hat{n}_1 + \beta \left( \hat{v} - \hat{n}_1\cos{\color{red}\vartheta} \right) \right)
-    \left( \hat{n}_2 + \beta \left( \hat{v} - \hat{n}_2\cos{\color{red}\vartheta} \right) \right) \\
-    &\!\!\!\!\! =\!\!\!\!\! & \cos(\delta\alpha) + 2\beta\cos{\color{red}\vartheta}\left( 1-\cos\delta\alpha \right),
+    &\!\!\!\!\! \simeq \!\!\!\!\!& \left( \hat{n}_1 + \beta \left( \hat{v} - \hat{n}_1\cos{\chi} \right) \right)
+    \left( \hat{n}_2 + \beta \left( \hat{v} - \hat{n}_2\cos{\chi} \right) \right) \\
+    &\!\!\!\!\! =\!\!\!\!\! & \cos(\delta\alpha) + 2\beta\cos{\chi}\left( 1-\cos\delta\alpha \right),
 \end{eqnarray}
 or, expanding again in powers of $\delta\alpha$,
 \begin{equation}
-    \delta\alpha' \simeq \delta\alpha \left( 1 - \beta\cos{\color{red}\vartheta} \right).
+    \delta\alpha' \simeq \delta\alpha \left( 1 - \beta\cos{\chi} \right).
 \end{equation}
 Because this equation holds irrespective of the direction $\hat{n}_1-\hat{n}_2$, it follows that,
-to first order in the small quantities $\beta$ and $\delta\alpha$,
-objects will only undergo magnification.
+{\color{red} by considering $\hat{n}_1$ and $\hat{n}_2$ to be pairs of  points on the same isophote,}
+objects will only undergo magnification to first order in the small quantities $\beta$ and $\delta\alpha$.
 
 
-{\color{red}It turns out that any} object with a circular cross section
+{It turns out that any} object with a circular cross section
 will retain that circular cross section to all orders in $\beta$.
 Therefore, for intrinsically circular galaxy images  {\it{no ellipticity will 
 be induced due to our motion}}.
@@ -230,8 +231,8 @@ of convergence {\it will} be affected by relativistic aberration.
 
 We now present a general procedure for boosting the shear matrix in order to extend the results of the previous section to higher order, although we only explicitly work to first order.
 
-Consider a unit vector  in an arbitrary direction $(\theta,\phi)$ specified in spherical coordinates.  Without loss of genearlity, we choose our coordinate axes such that 
-$(\theta,\phi)\simeq(\pi/2{\color{red}+}\delta\theta,\pi/2{\color{red}+}\delta\phi)$.   In Cartesian coordinates,
+Consider a unit vector  in an arbitrary direction $(\theta,\phi)$ specified in spherical coordinates.  Without loss of generality, we choose our coordinate axes such that 
+$(\theta,\phi)\simeq(\pi/2{+}\delta\theta,\pi/2{+}\delta\phi)$.   In Cartesian coordinates,
 \begin{equation}
 {\bf x}=\left(\begin{array}{c}
 x\\
@@ -243,15 +244,14 @@ z
 -\delta\theta
 \end{array}\right).
 \end{equation}
-In order to tranform to a frame where the boost is in the $\hat z$ direction, we rotate this unit vector {\color{red}by an angle $\psi = \pi/2-\vartheta$} about the ${\bf x}$-axis. Since the boost will not affect the azimuthal angle, there is no need to also rotate about the ${\bf z}$-axis.
+In order to tranform to a frame where the boost is in the $\hat z$ direction, we rotate this unit vector {by an angle $\psi = \pi/2-\chi$} about the ${\bf x}$-axis. Since the boost will not affect the azimuthal angle, there is no need to also rotate about the ${\bf z}$-axis.
 
-We next boost the unit vector in the z-direction, and then rotate back to the original frame.
-The boosted coordinates $(\theta',\phi')$, are
-again represented as
- $(\pi/2{\color{red}+}\delta\theta',\pi/2{\color{red}+}\delta\phi')$:
+We boost the unit vector in the z-direction, and then rotate back to the original frame.
+The boosted coordinates $(\theta',\phi')$, are represented as
+ $(\pi/2{+}\delta\theta',\pi/2{+}\delta\phi')$:
 \begin{eqnarray}
-\delta\theta' & \simeq &\delta\theta{\color{red}-}\beta\delta\theta\sin\psi\,,\\
-\delta\phi' & \simeq & \delta\phi{\color{red}-}\beta\delta\phi\sin\psi.
+\delta\theta' & \simeq &\delta\theta{-}\beta\delta\theta\sin\psi\,,\\
+\delta\phi' & \simeq & \delta\phi{-}\beta\delta\phi\sin\psi.
 \end{eqnarray}
 Here we have evaluated everything to second order in small parameters
 $\delta\theta$, $\delta\phi$, and $\beta$, and have ignored higher order contributions.
@@ -260,12 +260,12 @@ We can immediately see  that there will be induced magnification due
 to relativistic aberration. From eq.~\ref{matrix} we have
 \begin{equation}
 A_{ij} = \left(\begin{array}{cc}
-1{\color{red}-}\beta\sin\psi & 0\\
-0 & 1{\color{red}-}\beta\sin\psi
+1{-}\beta\sin\psi & 0\\
+0 & 1{-}\beta\sin\psi
 \end{array}\right),
 \end{equation}
 from which we conclude that only magnification effects are present
-at first order in $\beta$: $\kappa = {\color{red}\beta\sin\psi}$. As current measurements of
+at first order in $\beta$: $\kappa = {\beta\sin\psi}$. As current measurements of
 $\kappa$ from weak lensing surveys are of order $10^{-2}$ and $\beta\sim10^{-3}$,
 we expect this magnification to be up to $10$ per cent of weak lensing effects.
 
@@ -387,7 +387,7 @@ on the radial luminosity profile and spectrum of a galaxy.
 
 Higher order effects from boosting may become appreciable when considering 
 second-order lensing effects, such as flexion.  To
-higher order in small parameters, {\color{red}shear terms may 
+higher order in small parameters, {shear terms may 
 appear due to projection effects from the sky onto the observer plane:}
 $\gamma_{1}=-\frac{\beta}{2}\delta\theta^{2}\sin\psi$.
 Note that $\delta\theta$ is the angular size in radians of a galaxy, and 
